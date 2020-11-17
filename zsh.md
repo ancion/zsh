@@ -56,4 +56,5 @@
   ```
     source $ZDOTDIR/.zim/zimfw.zsh install   #zimfw install
   ```
-
+***NOTE***
+[more information](https://github.com/zimfw/zimfw/tree/v1.3.2) 
