@@ -1,4 +1,4 @@
-export PLUG_DIR=$HOME/.zim
+export PLUG_DIR=$HOME/.config/zsh/.zim
 if [[ ! -d $PLUG_DIR ]]; then
 	curl -fsSL https://raw.githubusercontent.com/zimfw/install/master/install.zsh | zsh
 	rm ~/.zimrc

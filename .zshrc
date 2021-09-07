@@ -106,6 +106,7 @@ source ${ZIM_HOME}/init.zsh
 #
 
 # Bind ^[[A/^[[B manually so up/down works both before and after zle-line-init
+
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
@@ -122,19 +123,24 @@ bindkey -M vicmd 'k' history-substring-search-up
 bindkey -M vicmd 'j' history-substring-search-down
 # }}} End configuration added by Zim install
 
+
 # load myself configuration as first 
 source ~/.config/zsh/env.zsh
 source ~/.config/zsh/fzf.zsh
 source ~/.config/zsh/vi.zsh
 source ~/.config/zsh/completion.zsh
-#source ~/.config/zsh/plugins.zsh
-#source ~/.config/zsh/mappings.zsh
+source ~/.config/zsh/plugins.zsh
+source ~/.config/zsh/mappings.zsh
+
+# ============ powerlevel10k  {{{
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
+# ------------------------------------------------------------------------------------
+# if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+#   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+# fi
+# ============ }}}
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -200,5 +206,5 @@ fi
 
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
+# [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
 #[[ ! -f ~/.config/zsh/zshrc ]] || source ~/.config/zsh/zshrc

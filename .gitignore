@@ -1,0 +1,7 @@
+.zshenv*
+.zhistory
+.zim/
+*.zwc
+.zlogin
+*dump
+*.old
