@@ -40,7 +40,7 @@ _fix_cursor() {
 precmd_functions+=(_fix_cursor)
 
 
-zle -N zle-line-init
+# zle -N zle-line-init
 zle -N zle-keymap-select
 
 KEYTIMEOUT=1
