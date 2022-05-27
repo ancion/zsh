@@ -21,5 +21,8 @@ CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
 export JAVA_HOME JAVA_BIN PATH CLASSPATH
 
 # luarocks module_file path
-PATH=$PATH:/usr/local/go/bin:/usr/local/src/luarocks-3.7.0/lua_module/bin
-export PATH
+export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:/usr/local/src/luarocks-3.7.0/lua_modules/bin
+export PATH=$PATH:/usr/local/src/dart-sdk/bin
+
+. "$HOME/.cargo/env"
