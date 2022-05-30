@@ -38,13 +38,33 @@ zmodule zsh-users/zsh-history-substring-search
 # ===========themes==== {{{
 
 # A customizable version of steeef's prompt theme.
+# --------------------------------------------------------
+# unicorn at Razer in ~/.zim/zsh/ (master**)
+# $ 
+# --------------------------------------------------------
 # zmodule steeef
 
 # powerlevel10k
+# --------------------------------------------------------
+# 🐳 ==> 
+# --------------------------------------------------------
 # zmodule romkatv/powerlevel10k
 
+# ---------------------------------------- ---------------
+# Razer%
+# ---------------------------------------- ---------------
 zmodule prompt-pwd
+
+# ---------------------------------------- ---------------
+# -[~]——— -
+# ---------------------------------------- ---------------
 zmodule magicmace
+
+# ---------------------------------------- ---------------
+# ~/.zim/zsh  master* 
+# > 
+# ---------------------------------------- ---------------
+# zmodule sindresorhus/pure
 
 # ===========}}}
 
@@ -55,4 +75,4 @@ zmodule hlissner/zsh-autopair
 zmodule pabloariasal/zfm
 zmodule agkozak/zsh-z
 zmodule Aloxaf/fzf-tab
-#zmodule cusxio/delta-prompt
+zmodule cusxio/delta-prompt
