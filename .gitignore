@@ -6,3 +6,5 @@
 *dump
 *.old
 .zcompcache/
+.zshrc
+.zimrc
