@@ -1,21 +1,17 @@
 bindkey '^v' edit-command-line
 bindkey -v
-bindkey -M vicmd "l" vi-backward-char
-bindkey -M vicmd "h" vi-forward-char
-bindkey -M vicmd "N" vi-beginning-of-line
-bindkey -M vicmd "I" vi-end-of-line
+bindkey -M vicmd "i" vi-insert
+bindkey -M vicmd "I" vi-insert-bol
+bindkey -M vicmd "h" vi-backward-char
+bindkey -M vicmd "l" vi-forward-char
+bindkey -M vicmd "H" vi-beginning-of-line
+bindkey -M vicmd "L" vi-end-of-line
 bindkey -M vicmd "j" down-line-or-history
 bindkey -M vicmd "k" up-line-or-history
 bindkey -M vicmd "u" undo
 #bindkey -M vicmd "-" vi-rev-repeat-search
 bindkey -M vicmd "=" vi-repeat-search
-bindkey -M vicmd "h" vi-forward-word-end
-
-#function zle-line-init zle-keymap-select {
-	#RPS1="${${KEYMAP/vicmd/-- NOR --}/(main|viins)/-- INS --}"
-	#RPS2=$RPS1
-	#zle reset-prompt
-#}
+bindkey -M vicmd "e" vi-forward-word-end
 
 function zle-keymap-select {
 	if [[ ${KEYMAP} == vicmd ]] || [[ $1 = 'block' ]]; then
@@ -38,10 +34,6 @@ _fix_cursor() {
 	echo -ne '\e[5 q'
 }
 precmd_functions+=(_fix_cursor)
-
-
-# zle -N zle-line-init
-zle -N zle-keymap-select
 
 KEYTIMEOUT=1
 

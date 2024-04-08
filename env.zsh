@@ -24,7 +24,8 @@ JDTLS_JVM_ARGS="-javaagent:$HOME/.local/share/lunarvim/mason/packages/jdtls/lomb
 export JAVA_HOME JAVA_BIN PATH CLASSPATH JDTLS_JVM_ARGS
 
 # luarocks module_file path
-export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin/
+export PATH=$PATH:/usr/local/src/luarocks-3.7.0/lua_modules/bin
 export PATH=$PATH:/usr/local/src/dart-sdk/bin
 export PATH=$PATH:$HOME/.local/share/nvim/mason/bin
 
