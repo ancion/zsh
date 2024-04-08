@@ -133,6 +133,9 @@ source ~/.config/zsh/vi.zsh
 source ~/.config/zsh/completion.zsh
 source ~/.config/zsh/plugins.zsh
 source ~/.config/zsh/mappings.zsh
+source ~/.config/zsh/function.zsh
+
+autopair init
 
 # ============ powerlevel10k  {{{
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
