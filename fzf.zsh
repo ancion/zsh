@@ -60,7 +60,7 @@ fif() {
 }
 
 find-in-file() {
-	grep --line-buffered --color=never -r "" * | fzf
+	grep --binary-files=without-match --line-buffered --color=never -r "" * | fzf
 }
 zle -N find-in-file
 bindkey '^f' find-in-file
