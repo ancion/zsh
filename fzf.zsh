@@ -65,3 +65,18 @@ find-in-file() {
 zle -N find-in-file
 bindkey '^f' find-in-file
 
+zle-select-server() {
+  items=$(cat $HOME/.config/zsh/know.host)
+  config=$(printf "%s" "${items[@]}" | fzf --prompt="󰒍  Connect Server > " --height=~50% --layout=reverse --border)
+  if [[ -z $config ]]; then 
+    zle reset-prompt
+    return 0
+  fi
+  config=$(echo ${config} | awk '{print $2}')
+  ssh $config 
+
+	zle fzf-redraw-prompt
+}
+
+zle -N zle-select-server
+bindkey "^h" zle-select-server
