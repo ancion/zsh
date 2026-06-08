@@ -128,6 +128,7 @@ bindkey -M vicmd 'j' history-substring-search-down
 
 # load myself configuration as first 
 source ~/.config/zsh/env.zsh
+source ~/.config/zsh/aliases.zsh
 source ~/.config/zsh/fzf.zsh
 source ~/.config/zsh/vi.zsh
 source ~/.config/zsh/completion.zsh
